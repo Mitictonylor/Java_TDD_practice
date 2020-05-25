@@ -30,7 +30,7 @@ public class PrinterTest {
     @Test
     public void setToner(){
         printer.setToner(50);
-        assertEquals(50, printer.setToner());
+        assertEquals(50, printer.getToner());
     }
     @Test
     public void setLeftPaper(){
