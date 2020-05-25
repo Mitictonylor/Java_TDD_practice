@@ -27,4 +27,9 @@ public class PrinterTest {
         assertEquals(10, printer.getLeftPaper());
         assertEquals(60, printer.getToner());
     }
+    @Test
+    public  void SetToner(){
+        printer.setToner(50);
+        assertEquals(50, printer.setToner());
+    }
 }
