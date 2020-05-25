@@ -27,9 +27,12 @@ public class Printer {
         int beforePrintPaperLeft = this.getLeftPaper();
         int beforePrintToner = this.getToner();
         int neededPaperForPrint = numberOfPages * howManyCopies;
-        this.setLeftPaper(beforePrintPaperLeft - neededPaperForPrint);
-        this.setToner(beforePrintToner - neededPaperForPrint);
+        if (checkIfEnoughPaper(neededPaperForPrint) && checkIfEnoughToner(neededPaperForPrint)) {
+            this.setLeftPaper(beforePrintPaperLeft - neededPaperForPrint);
+            this.setToner(beforePrintToner - neededPaperForPrint);
+        }
     }
+
     public boolean checkIfEnoughPaper(int pagesToPrint){
         if (pagesToPrint > this.getLeftPaper()){
             return false;
