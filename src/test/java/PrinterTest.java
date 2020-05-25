@@ -37,4 +37,20 @@ public class PrinterTest {
         printer.setLeftPaper(10);
         assertEquals(10, printer.getLeftPaper());
     }
+    @Test
+    public void thereIsEnoughPaper(){
+        assertEquals(true, printer.checkIfEnoughPaper(10));
+    }
+    @Test
+    public void thereIsNotEnoughPaper(){
+        assertEquals(false, printer.checkIfEnoughPaper(80));
+    }
+    @Test
+    public void thereIsEnoughToner(){
+        assertEquals(true, printer.checkIfEnoughToner(10));
+    }
+    @Test
+    public void thereIsNotEnoughToner(){
+        assertEquals(false, printer.checkIfEnoughToner(180));
+    }
 }

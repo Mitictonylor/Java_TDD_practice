@@ -30,6 +30,18 @@ public class Printer {
         this.setLeftPaper(beforePrintPaperLeft - neededPaperForPrint);
         this.setToner(beforePrintToner - neededPaperForPrint);
     }
+    public boolean checkIfEnoughPaper(int pagesToPrint){
+        if (pagesToPrint > this.getLeftPaper()){
+            return false;
+        } else {
+            return true;}
+     }
 
+    public boolean checkIfEnoughToner(int pagesToPrint){
+        if (pagesToPrint > this.getToner()){
+            return false;
+        } else {
+            return true;}
+    }
+ }
 
-}
