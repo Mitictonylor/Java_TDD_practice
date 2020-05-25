@@ -4,7 +4,7 @@ public class WaterBottle {
     private int volume;
 
     public WaterBottle(int volume){
-        this.volume=volume;
+        this.volume = volume;
 }
 
     public int getVolume(){
@@ -20,5 +20,8 @@ public class WaterBottle {
     }
     public void empty(){
         this.setVolume(0);
+    }
+    public void fill(){
+        this.setVolume(100);
     }
 }
