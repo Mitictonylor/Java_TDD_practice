@@ -10,5 +10,13 @@ public class WaterBottle {
     public int getVolume(){
     return this.volume;
     }
+    public void setVolume(int volume){
+        this.volume = volume;
+    }
+    public void drink(){
+        int beforeDrink = this.getVolume();
+        int afterDrink = beforeDrink - 10;
+        this.setVolume(afterDrink);
+    }
 
 }
