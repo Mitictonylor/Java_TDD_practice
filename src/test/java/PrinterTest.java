@@ -16,4 +16,15 @@ public class PrinterTest {
     public void getLeftPaper(){
         assertEquals(50, printer.getLeftPaper());
     }
+
+    @Test
+    public  void getToner(){
+        assertEquals(100, printer.getToner());
+    }
+    @Test
+    public void checkAfterPrintTheLeftPaperAmountGoesDown(){
+        printer.print(10,4);
+        assertEquals(10, printer.getLeftPaper());
+        assertEquals(60, printer.getToner());
+    }
 }
