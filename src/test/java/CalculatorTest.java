@@ -23,6 +23,10 @@ public class CalculatorTest {
         assertEquals(5, calculator.subtract(7,2));
 
     }
+    @Test
+    public void multiply(){
+        assertEquals(14, calculator.multiply(7,2));
 
+    }
 
 }
