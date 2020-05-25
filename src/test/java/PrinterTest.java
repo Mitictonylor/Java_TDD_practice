@@ -28,8 +28,13 @@ public class PrinterTest {
         assertEquals(60, printer.getToner());
     }
     @Test
-    public  void SetToner(){
+    public void setToner(){
         printer.setToner(50);
         assertEquals(50, printer.setToner());
+    }
+    @Test
+    public void setLeftPaper(){
+        printer.setLeftPaper(10);
+        assertEquals(10, printer.getLeftPaper());
     }
 }
